@@ -1,3 +1,4 @@
+*test*
 <template>
   <div class="bs-docs-section">
     <h1 class="page-header">
@@ -42,7 +43,6 @@ Provide contextual feedback messages for typical user actions with the handful o
         关闭事件
       </alert>
     </div>
-
     <h2>Attributes</h2>
     <table class="table">
       <thead>
@@ -124,12 +124,7 @@ Provide contextual feedback messages for typical user actions with the handful o
 </template>
 
 <script>
-  import Alert from '../components/alert.vue'
-
   export default {
-    components: {
-      Alert
-    },
     methods: {
       close () {
         window.alert('close')

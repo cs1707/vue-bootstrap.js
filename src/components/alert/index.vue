@@ -11,6 +11,7 @@
 
 <script>
   export default {
+    name: 'alert',
     data () {
       return {
         visible: true
