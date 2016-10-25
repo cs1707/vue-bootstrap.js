@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <div class="container">
-      <router-view></router-view>
-    <div>
+    <main-header></main-header>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  components: {
+  import MainHeader from './components/header'
+  export default {
+    name: 'app',
+    components: {
+      MainHeader
+    }
   }
-}
 </script>
 
 <style>
+  @import './assets/css/docs.css';
+  @import './assets/css/patch.css';
+  @import './assets/css/hljs.css';
 </style>

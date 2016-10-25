@@ -1,14 +1,32 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Alert from './docs/zh-cn/alert'
+import Components from './views/components'
+import Quickstart from './docs/zh-cn/quickstart.md'
+import Development from './docs/zh-cn/development.md'
+import Alert from './docs/zh-cn/alert.md'
 
 Vue.use(Router)
 
 const router = new Router({
   routes: [
     {
-      path: '/alert',
-      component: Alert
+      path: '/components',
+      redirect: '/components/quickstart',
+      component: Components,
+      children: [
+        {
+          path: 'alert',
+          component: Alert
+        },
+        {
+          path: 'quickstart',
+          component: Quickstart
+        },
+        {
+          path: 'development',
+          component: Development
+        }
+      ]
     }
   ]
 })

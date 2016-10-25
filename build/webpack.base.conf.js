@@ -2,6 +2,8 @@ var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
+var striptags = require('./strip-tags')
+var md = require('markdown-it')()
 
 module.exports = {
   entry: {
@@ -34,12 +36,6 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'eslint',
-        include: projectRoot,
-        exclude: /node_modules/
-      },
-      {
-        test: /\.md$/,
         loader: 'eslint',
         include: projectRoot,
         exclude: /node_modules/
@@ -92,5 +88,54 @@ module.exports = {
         browsers: ['last 2 versions']
       })
     ]
+  },
+  vueMarkdown: {
+    preprocess: function (markdownIt, source) {
+      // do any thing
+      markdownIt.renderer.rules.table_open = function () {
+        return '<table class="table table-bordered">'
+      }
+      markdownIt.renderer.rules.fence = wrap(markdownIt.renderer.rules.fence)
+
+      return source
+    },
+    use: [
+      [require('markdown-it-container'), 'demo', {
+        validate: function (params) {
+          console.log(params.trim().match(/^demo\s*(.*)$/))
+          return params.trim().match(/^demo\s*(.*)$/)
+        },
+
+        render: function (tokens, idx) {
+          console.log('wtf')
+          // var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
+          if (tokens[idx].nesting === 1) {
+            // var description = (m && m.length > 1) ? m[1] : ''
+            var html = convert(striptags(tokens[idx + 1].content, 'script'))
+            // var descriptionHTML = description
+            //   ? '<div class="description">' + md.render(description) + '</div>'
+            //   : ''
+            return `<div class="bs-example">${html}</div>
+                    <div class="highlight">`
+          }
+          return '</div></div>\n'
+        }
+      }]
+    ]
   }
+}
+
+function wrap (render) {
+  return function () {
+    return render.apply(this, arguments)
+      .replace('<code class="', '<code class="hljs ')
+      .replace('<code>', '<code class="hljs">')
+  }
+}
+
+function convert (str) {
+  str = str.replace(/(&#x)(\w{4});/gi, function ($0) {
+    return String.fromCharCode(parseInt(encodeURIComponent($0).replace(/(%26%23x)(\w{4})(%3B)/g, '$2'), 16))
+  })
+  return str
 }
