@@ -102,7 +102,6 @@ module.exports = {
     use: [
       [require('markdown-it-container'), 'demo', {
         validate: function (params) {
-          console.log(params.trim().match(/^demo\s*(.*)$/))
           return params.trim().match(/^demo\s*(.*)$/)
         },
 

@@ -2,7 +2,7 @@
   <div class="container bs-docs-container">
     <div class="row">
       <div class="col-xs-9">
-        <router-view></router-view>
+        <router-view class="doc"></router-view>
       </div>
       <div class="col-xs-3">
         <side-nav></side-nav>

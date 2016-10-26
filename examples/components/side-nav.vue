@@ -16,7 +16,10 @@
         <a href="javascript:void(0);">组件</a>
         <ul class="nav sub-nav">
           <li>
-            <router-link to="/components/alert">alert</router-link>
+            <router-link to="/components/alert">Alert</router-link>
+          </li>
+          <li>
+            <router-link to="/components/affix">Affix</router-link>
           </li>
         </ul>
       </li>

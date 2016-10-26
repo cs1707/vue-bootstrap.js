@@ -1,4 +1,5 @@
 import Alert from './components/alert'
+import Affix from './components/affix'
 
 const install = function (Vue) {
   if (install.installed) {
@@ -6,6 +7,7 @@ const install = function (Vue) {
   }
 
   Vue.component(Alert.name, Alert)
+  Vue.component(Affix.name, Affix)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -14,5 +16,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 module.exports = {
   install,
-  Alert
+  Alert,
+  Affix
 }

@@ -72,3 +72,13 @@
 |---------- |-------- |---------- |
 | on-close | 关闭alert时触发的事件 | — |
 
+<script>
+  export default {
+    methods: {
+      close () {
+        window.alert('close')
+      }
+    }
+  }
+</script>
+
