@@ -5,6 +5,7 @@ import Quickstart from './docs/zh-cn/quickstart.md'
 import Development from './docs/zh-cn/development.md'
 import Alert from './docs/zh-cn/alert.md'
 import Affix from './docs/zh-cn/affix.md'
+import Dropdown from './docs/zh-cn/Dropdown.md'
 
 Vue.use(Router)
 
@@ -30,6 +31,10 @@ const router = new Router({
         {
           path: 'affix',
           component: Affix
+        },
+        {
+          path: 'dropdown',
+          component: Dropdown
         }
       ]
     }

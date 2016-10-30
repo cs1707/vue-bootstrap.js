@@ -28,8 +28,8 @@
 ::: demo
 ```html
 <template>
-  <alert type="danger" :closable="true">
-    可以关闭的提示(默认显示关闭按钮)
+  <alert v-show="isShow" type="danger" :closable="true" @on-close="isShow = false">
+    可以关闭的提示
   </alert>
   <alert type="info" :closable="false">
     不可关闭的提示
@@ -43,15 +43,37 @@
 ::: demo
 ```html
 <template>
-  <alert type="danger" @on-close="close">
-    关闭事件
+  <alert :type="item.type" :closable="true" @on-close="close(index)" v-for="(item, index) in list">
+    {{item.msg}}
   </alert>
 </template>
 <script>
   export default {
+    data () {
+      return {
+        list: [
+          {
+            type: 'danger',
+            msg: '关闭事件'
+          },
+          {
+            type: 'info',
+            msg: '关闭事件'
+          },
+          {
+            type: 'success',
+            msg: '关闭事件'
+          },
+          {
+            type: 'warning',
+            msg: '关闭事件'
+          }
+        ]
+      }
+    },
     methods: {
-      close () {
-        window.alert('close')
+      close (index) {
+        this.list.splice(index, 1)
       }
     }
   }
@@ -63,20 +85,43 @@
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| type | 主题 | string | success/warning/info/error | info |
-| closable | 是否可关闭 | boolean | — | true |
+| type | 主题 | string | success, warning, info, error | info |
+| closable | 是否显示关闭按钮 | boolean | — | false |
 
 ### Events
 
 | 事件名称 | 说明 | 回调参数 |
 |---------- |-------- |---------- |
-| on-close | 关闭alert时触发的事件 | — |
+| on-close | 点击关闭按钮时触发的事件 | — |
 
 <script>
   export default {
+    data () {
+      return {
+        list: [
+          {
+            type: 'danger',
+            msg: '关闭事件'
+          },
+          {
+            type: 'info',
+            msg: '关闭事件'
+          },
+          {
+            type: 'success',
+            msg: '关闭事件'
+          },
+          {
+            type: 'warning',
+            msg: '关闭事件'
+          }
+        ],
+        isShow: true
+      }
+    },
     methods: {
-      close () {
-        window.alert('close')
+      close (index) {
+        this.list.splice(index, 1)
       }
     }
   }

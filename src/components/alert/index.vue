@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div role="alert" :class="[ `alert-${type}` ]" class="alert" v-show="visible">
+    <div role="alert" :class="[ `alert-${type}` ]" class="alert">
       <button type="button" class="close" v-if="closable" @click="close()">
         <span>×</span>
       </button>
@@ -12,11 +12,6 @@
 <script>
   export default {
     name: 'alert',
-    data () {
-      return {
-        visible: true
-      }
-    },
     props: {
       type: {
         type: String,
@@ -24,12 +19,11 @@
       },
       closable: {
         type: Boolean,
-        default: true
+        default: false
       }
     },
     methods: {
       close () {
-        this.visible = false
         this.$emit('on-close')
       }
     }
@@ -39,7 +33,7 @@
 <style>
   .fade-enter-active,
   .fade-leave-active {
-    transition: opacity .4s;
+    transition: opacity .15s linear;
   }
   .fade-enter,
   .fade-leave-active {

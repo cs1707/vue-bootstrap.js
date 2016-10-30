@@ -13,7 +13,8 @@
         default: 0
       },
       offsetBottom: {
-        type: Number
+        type: Number,
+        default: 0
       }
     },
     data () {
@@ -34,6 +35,7 @@
         }
       },
       getState (scrollHeight, height, offsetTop, offsetBottom) {
+        console.log(arguments)
         let scrollTop = window.pageYOffset
         let position = this.getOffset()
         let targetHeight = window.innerHeight
@@ -52,7 +54,7 @@
         let initializing = this.affixed == null
         let colliderTop = initializing ? scrollTop : position.top
         let colliderHeight = initializing ? targetHeight : height
-
+        console.log(initializing)
         if (offsetTop != null && scrollTop <= offsetTop) {
           return 'top'
         }
@@ -82,7 +84,6 @@
         let scrollHeight = document.body.offsetHeight
 
         let affix = this.getState(scrollHeight, height, this.offsetTop, this.offsetBottom)
-
         if (this.affixed !== affix) {
           if (this.unpin != null) {
             this.affixStyle = {}
@@ -97,21 +98,21 @@
           }
         }
 
-        if (affix === 'bottom') {
-          let top = scrollHeight - height - this.offsetBottom - this.getOffset().top + (parseFloat(this.$el.style.top) || 0)
-          this.affixStyle = {
-            top: top + 'px'
-          }
-        }
+        // if (affix === 'bottom') {
+        //   let top = scrollHeight - height - this.offsetBottom - this.getOffset().top + (parseFloat(this.$el.style.top) || 0)
+        //   this.affixStyle = {
+        //     top: top + 'px'
+        //   }
+        // }
       },
 
       bindListener () {
-        ['scroll', 'resize'].forEach((e) => {
+        ;['scroll', 'resize'].forEach((e) => {
           window.addEventListener(e, this.checkPosition, false)
         })
       },
       removeListener () {
-        ['scroll', 'resize'].forEach((e) => {
+        ;['scroll', 'resize'].forEach((e) => {
           window.removeEventListener(e, this.checkPosition)
         })
       }
