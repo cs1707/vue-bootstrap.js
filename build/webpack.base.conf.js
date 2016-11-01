@@ -3,7 +3,7 @@ var config = require('../config')
 var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 var striptags = require('./strip-tags')
-var md = require('markdown-it')()
+// var md = require('markdown-it')()
 
 module.exports = {
   entry: {
@@ -106,7 +106,6 @@ module.exports = {
         },
 
         render: function (tokens, idx) {
-          console.log('wtf')
           // var m = tokens[idx].info.trim().match(/^demo\s*(.*)$/)
           if (tokens[idx].nesting === 1) {
             // var description = (m && m.length > 1) ? m[1] : ''

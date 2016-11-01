@@ -13,7 +13,6 @@
     hover 触发
     <span class="caret"></span>
   </button>
-  <button class="btn btn-default" v-dropdown-toggle>wtf</button>
   <ul class="dropdown-menu" slot="dropdown">
     <li><a href="javascript:void(0)">action</a></li>
     <li><a href="javascript:void(0)">another action</a></li>

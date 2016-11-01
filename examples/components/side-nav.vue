@@ -25,6 +25,8 @@
             <li>
               <router-link to="/components/dropdown">Dropdown</router-link>
             </li>
+            <li>
+              <router-link to="/components/modal">Modal</router-link>
           </ul>
         </li>
       </ul>

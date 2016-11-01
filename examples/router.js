@@ -6,6 +6,7 @@ import Development from './docs/zh-cn/development.md'
 import Alert from './docs/zh-cn/alert.md'
 import Affix from './docs/zh-cn/affix.md'
 import Dropdown from './docs/zh-cn/Dropdown.md'
+import Modal from './docs/zh-cn/Modal.md'
 
 Vue.use(Router)
 
@@ -35,6 +36,10 @@ const router = new Router({
         {
           path: 'dropdown',
           component: Dropdown
+        },
+        {
+          path: 'modal',
+          component: Modal
         }
       ]
     }
