@@ -7,6 +7,7 @@ import Alert from './docs/zh-cn/alert.md'
 import Affix from './docs/zh-cn/affix.md'
 import Dropdown from './docs/zh-cn/Dropdown.md'
 import Modal from './docs/zh-cn/Modal.md'
+import Tab from './docs/zh-cn/Tab.md'
 
 Vue.use(Router)
 
@@ -40,6 +41,10 @@ const router = new Router({
         {
           path: 'modal',
           component: Modal
+        },
+        {
+          path: 'tab',
+          component: Tab
         }
       ]
     }

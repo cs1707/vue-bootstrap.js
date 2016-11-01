@@ -5,6 +5,8 @@ import Modal from './components/modal'
 import ModalHeader from './components/modal-header'
 import ModalBody from './components/modal-body'
 import ModalFooter from './components/modal-footer'
+import Tab from './components/tab'
+import TabItem from './components/tab-item'
 
 const install = function (Vue) {
   if (install.installed) {
@@ -18,6 +20,8 @@ const install = function (Vue) {
   Vue.component(ModalHeader.name, ModalHeader)
   Vue.component(ModalBody.name, ModalBody)
   Vue.component(ModalFooter.name, ModalFooter)
+  Vue.component(Tab.name, Tab)
+  Vue.component(TabItem.name, TabItem)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -32,5 +36,7 @@ module.exports = {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter
+  ModalFooter,
+  Tab,
+  TabItem
 }

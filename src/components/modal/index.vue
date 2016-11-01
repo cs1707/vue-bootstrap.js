@@ -2,7 +2,13 @@
   <transition
     @after-enter="afterEnter"
     @leave="leave">
-    <div class="modal fade" :class="inClass" @click.self="handleWrapperClick()" v-show="value" style="display: block;">
+    <div
+      class="modal fade"
+      :class="inClass"
+      @click.self="handleWrapperClick()"
+      @keyup.esc=""
+      v-show="value"
+      style="display: block;">
       <template v-if="backdrop">
         <transition
           @after-enter="afterEnter"
@@ -41,6 +47,9 @@
       },
       value: {}
     },
+    mounted () {
+      window.addEventListener('keyup', this.handleEsc)
+    },
     data () {
       return {
         inClass: {
@@ -63,6 +72,11 @@
           this.$emit('input', false)
         }
       },
+      handleEsc (e) {
+        if (this.keyboard && e.keyCode === 27) {
+          this.$emit('input', false)
+        }
+      },
       afterEnter () {
         this.inClass.in = true
         // todo 兼容性处理
@@ -77,6 +91,9 @@
           document.body.classList.remove('modal-open')
         }
       }
+    },
+    beforeDestroy () {
+      window.removeEventListener('keyup', this.handleEsc)
     }
   }
 </script>

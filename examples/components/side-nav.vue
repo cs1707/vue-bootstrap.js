@@ -27,6 +27,10 @@
             </li>
             <li>
               <router-link to="/components/modal">Modal</router-link>
+            </li>
+            <li>
+              <router-link to="/components/tab">Tab</router-link>
+            </li>
           </ul>
         </li>
       </ul>
