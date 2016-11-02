@@ -31,6 +31,9 @@
             <li>
               <router-link to="/components/tab">Tab</router-link>
             </li>
+            <li>
+              <router-link to="/components/progress">progress</router-link>
+            </li>
           </ul>
         </li>
       </ul>

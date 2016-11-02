@@ -5,9 +5,10 @@ import Quickstart from './docs/zh-cn/quickstart.md'
 import Development from './docs/zh-cn/development.md'
 import Alert from './docs/zh-cn/alert.md'
 import Affix from './docs/zh-cn/affix.md'
-import Dropdown from './docs/zh-cn/Dropdown.md'
-import Modal from './docs/zh-cn/Modal.md'
-import Tab from './docs/zh-cn/Tab.md'
+import Dropdown from './docs/zh-cn/dropdown.md'
+import Modal from './docs/zh-cn/modal.md'
+import Tab from './docs/zh-cn/tab.md'
+import Progress from './docs/zh-cn/progress.md'
 
 Vue.use(Router)
 
@@ -45,6 +46,10 @@ const router = new Router({
         {
           path: 'tab',
           component: Tab
+        },
+        {
+          path: 'progress',
+          component: Progress
         }
       ]
     }
