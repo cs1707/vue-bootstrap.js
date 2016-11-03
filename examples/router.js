@@ -9,6 +9,7 @@ import Dropdown from './docs/zh-cn/dropdown.md'
 import Modal from './docs/zh-cn/modal.md'
 import Tab from './docs/zh-cn/tab.md'
 import Progress from './docs/zh-cn/progress.md'
+import Carousel from './docs/zh-cn/carousel.md'
 
 Vue.use(Router)
 
@@ -50,6 +51,10 @@ const router = new Router({
         {
           path: 'progress',
           component: Progress
+        },
+        {
+          path: 'carousel',
+          component: Carousel
         }
       ]
     }

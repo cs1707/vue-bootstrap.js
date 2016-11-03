@@ -8,6 +8,7 @@ import ModalFooter from './components/modal-footer'
 import Tab from './components/tab'
 import TabItem from './components/tab-item'
 import { Progress, ProgressBar } from './components/progress'
+import { Carousel, CarouselItem } from './components/carousel'
 
 const install = function (Vue) {
   if (install.installed) {
@@ -25,6 +26,8 @@ const install = function (Vue) {
   Vue.component(TabItem.name, TabItem)
   Vue.component(Progress.name, Progress)
   Vue.component(ProgressBar.name, ProgressBar)
+  Vue.component(Carousel.name, Carousel)
+  Vue.component(CarouselItem.name, CarouselItem)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -43,5 +46,7 @@ module.exports = {
   Tab,
   TabItem,
   Progress,
-  ProgressBar
+  ProgressBar,
+  Carousel,
+  CarouselItem
 }

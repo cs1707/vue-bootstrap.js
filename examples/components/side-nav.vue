@@ -32,7 +32,10 @@
               <router-link to="/components/tab">Tab</router-link>
             </li>
             <li>
-              <router-link to="/components/progress">progress</router-link>
+              <router-link to="/components/progress">Progress</router-link>
+            </li>
+            <li>
+              <router-link to="/components/carousel">Carousel</router-link>
             </li>
           </ul>
         </li>
