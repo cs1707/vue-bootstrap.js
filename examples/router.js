@@ -10,6 +10,7 @@ import Modal from './docs/zh-cn/modal.md'
 import Tab from './docs/zh-cn/tab.md'
 import Progress from './docs/zh-cn/progress.md'
 import Carousel from './docs/zh-cn/carousel.md'
+import Pagination from './docs/zh-cn/pagination.md'
 
 Vue.use(Router)
 
@@ -55,6 +56,10 @@ const router = new Router({
         {
           path: 'carousel',
           component: Carousel
+        },
+        {
+          path: 'pagination',
+          component: Pagination
         }
       ]
     }

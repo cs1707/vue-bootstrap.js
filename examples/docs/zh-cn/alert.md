@@ -85,7 +85,7 @@
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
-| type | 主题 | string | success, warning, info, error | info |
+| type | 主题 | string | success, warning, info, dange | info |
 | closable | 是否显示关闭按钮 | boolean | — | false |
 
 ### Events

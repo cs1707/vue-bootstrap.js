@@ -29,6 +29,9 @@
         <li>
           <router-link to="/components/carousel">Carousel</router-link>
         </li>
+        <li>
+          <router-link to="/components/pagination">Pagination</router-link>
+        </li>
       </ul>
     <!-- </affix> -->
   </div>
