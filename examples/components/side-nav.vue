@@ -32,6 +32,9 @@
         <li>
           <router-link to="/components/pagination">Pagination</router-link>
         </li>
+        <li>
+          <router-link to="/components/accordion">Accordion</router-link>
+        </li>
       </ul>
     <!-- </affix> -->
   </div>

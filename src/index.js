@@ -9,6 +9,7 @@ import Tab from './components/tab'
 import TabItem from './components/tab-item'
 import { Progress, ProgressBar } from './components/progress'
 import { Carousel, CarouselItem } from './components/carousel'
+import { Accordion, AccordionItem } from './components/accordion'
 import Pagination from './components/pagination'
 
 const install = function (Vue) {
@@ -30,6 +31,8 @@ const install = function (Vue) {
   Vue.component(Carousel.name, Carousel)
   Vue.component(CarouselItem.name, CarouselItem)
   Vue.component(Pagination.name, Pagination)
+  Vue.component(Accordion.name, Accordion)
+  Vue.component(AccordionItem.name, AccordionItem)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -51,5 +54,7 @@ module.exports = {
   ProgressBar,
   Carousel,
   CarouselItem,
-  Pagination
+  Pagination,
+  Accordion,
+  AccordionItem
 }

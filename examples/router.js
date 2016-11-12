@@ -11,6 +11,7 @@ import Tab from './docs/zh-cn/tab.md'
 import Progress from './docs/zh-cn/progress.md'
 import Carousel from './docs/zh-cn/carousel.md'
 import Pagination from './docs/zh-cn/pagination.md'
+import Accordion from './docs/zh-cn/accordion.md'
 
 Vue.use(Router)
 
@@ -60,6 +61,10 @@ const router = new Router({
         {
           path: 'pagination',
           component: Pagination
+        },
+        {
+          path: 'accordion',
+          component: Accordion
         }
       ]
     }
