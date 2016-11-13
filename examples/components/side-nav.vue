@@ -35,6 +35,12 @@
         <li>
           <router-link to="/components/accordion">Accordion</router-link>
         </li>
+        <li>
+          <router-link to="/components/tooltip">Tooltip</router-link>
+        </li>
+        <li>
+          <router-link to="/components/popover">Popover</router-link>
+        </li>
       </ul>
     <!-- </affix> -->
   </div>

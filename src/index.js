@@ -11,6 +11,8 @@ import { Progress, ProgressBar } from './components/progress'
 import { Carousel, CarouselItem } from './components/carousel'
 import { Accordion, AccordionItem } from './components/accordion'
 import Pagination from './components/pagination'
+import Tooltip from './components/tooltip'
+import Popover from './components/popover'
 
 const install = function (Vue) {
   if (install.installed) {
@@ -33,6 +35,8 @@ const install = function (Vue) {
   Vue.component(Pagination.name, Pagination)
   Vue.component(Accordion.name, Accordion)
   Vue.component(AccordionItem.name, AccordionItem)
+  Vue.component(Tooltip.name, Tooltip)
+  Vue.component(Popover.name, Popover)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -56,5 +60,7 @@ module.exports = {
   CarouselItem,
   Pagination,
   Accordion,
-  AccordionItem
+  AccordionItem,
+  Tooltip,
+  Popover
 }

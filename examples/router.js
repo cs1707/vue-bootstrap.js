@@ -12,6 +12,8 @@ import Progress from './docs/zh-cn/progress.md'
 import Carousel from './docs/zh-cn/carousel.md'
 import Pagination from './docs/zh-cn/pagination.md'
 import Accordion from './docs/zh-cn/accordion.md'
+import Tooltip from './docs/zh-cn/tooltip.md'
+import Popover from './docs/zh-cn/popover.md'
 
 Vue.use(Router)
 
@@ -65,6 +67,14 @@ const router = new Router({
         {
           path: 'accordion',
           component: Accordion
+        },
+        {
+          path: 'tooltip',
+          component: Tooltip
+        },
+        {
+          path: 'popover',
+          component: Popover
         }
       ]
     }

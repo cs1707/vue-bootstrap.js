@@ -90,7 +90,7 @@
         this.collapseClass = [ 'collapse', 'in' ]
         this.collapseStyle = {}
       },
-      beforeLeave () {
+      beforeLeave (el) {
         this.collapseStyle = {
           height: this.$refs.panelBody.offsetHeight + 'px'
         }
@@ -99,6 +99,8 @@
           this.collapseStyle = {
             height: '0px'
           }
+          // force layout
+          el.offsetHeight
         })
       },
       afterLeave () {
