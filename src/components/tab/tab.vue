@@ -1,11 +1,11 @@
 <template>
-  <div class="modal-body">
+  <ul class="nav nav-tabs" id="myTabs" role="tablist">
     <slot></slot>
-  </div>
+  </ul>
 </template>
 
 <script>
   export default {
-    name: 'modal-body'
+    name: 'bs-tab'
   }
 </script>

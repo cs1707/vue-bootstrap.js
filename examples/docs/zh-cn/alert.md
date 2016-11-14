@@ -1,4 +1,4 @@
-## Alerts
+## Alert
 
 用于页面中展示重要的提示信息。
 
@@ -7,18 +7,18 @@
 ::: demo
 ```html
 <template>
-  <alert type="success">
+  <bs-alert type="success">
     成功提示文案
-  </alert>
-  <alert type="info">
+  </bs-alert>
+  <bs-alert type="info">
     消息提示文案
-  </alert>
-  <alert type="warning">
+  </bs-alert>
+  <bs-alert type="warning">
     警告提示文案
-  </alert>
-  <alert type="danger">
+  </bs-alert>
+  <bs-alert type="danger">
     错误提示文案
-  </alert>
+  </bs-alert>
 </template>
 ```
 :::
@@ -28,12 +28,12 @@
 ::: demo
 ```html
 <template>
-  <alert v-show="isShow" type="danger" :closable="true" @on-close="isShow = false">
+  <bs-alert v-show="isShow" type="danger" :closable="true" @on-close="isShow = false">
     可以关闭的提示
-  </alert>
-  <alert type="info" :closable="false">
+  </bs-alert>
+  <bs-alert type="info" :closable="false">
     不可关闭的提示
-  </alert>
+  </bs-alert>
 </template>
 ```
 :::
@@ -43,9 +43,9 @@
 ::: demo
 ```html
 <template>
-  <alert :type="item.type" :closable="true" @on-close="close(index)" v-for="(item, index) in list">
+  <bs-alert :type="item.type" :closable="true" @on-close="close(index)" v-for="(item, index) in list">
     {{item.msg}}
-  </alert>
+  </bs-alert>
 </template>
 <script>
   export default {

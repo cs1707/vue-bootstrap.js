@@ -6,7 +6,6 @@
       class="modal fade"
       :class="inClass"
       @click.self="handleWrapperClick()"
-      @keyup.esc=""
       v-show="value"
       style="display: block;">
       <template v-if="backdrop">
@@ -27,7 +26,7 @@
 
 <script>
   export default {
-    name: 'modal',
+    name: 'bs-modal',
     props: {
       backdrop: {
         type: Boolean,

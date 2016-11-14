@@ -8,11 +8,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <router-link to="/" class="navbar-brand">VueBootstrap</router-link>
+        <router-link to="/" class="navbar-brand">vue-bootstrap.js</router-link>
       </div>
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav navbar-right">
-          <li><router-link to="/components">组件</router-link></li>
+          <li><router-link to="/components">Components</router-link></li>
           <li><a href="https://github.com/cs1707/vue-bootstrap" target="_blank">Github</a></li>
         </ul>
       </nav>

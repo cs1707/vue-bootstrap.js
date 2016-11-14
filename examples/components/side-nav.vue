@@ -3,10 +3,10 @@
     <!-- <affix :offset-top="90"> -->
       <ul class="nav bs-docs-sidenav">
         <li>
-          <router-link to="/components/quickstart">快速上手</router-link>
+          <router-link to="/components/quickstart">Quickstart</router-link>
         </li>
         <li>
-          <router-link to="/components/development">开发指南</router-link>
+          <router-link to="/components/development">Development</router-link>
         </li>
         <li>
           <router-link to="/components/alert">Alert</router-link>

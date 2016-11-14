@@ -9,7 +9,7 @@
   import clickoutside from '../../utils/clickoutside'
 
   export default {
-    name: 'dropdown',
+    name: 'bs-dropdown',
     data () {
       return {
         timeout: null,

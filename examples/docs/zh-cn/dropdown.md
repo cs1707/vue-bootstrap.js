@@ -1,6 +1,6 @@
 ## Dropdown
 
-用于显示链接列表的可切换、有上下文的菜单。
+用于显示下拉菜单。
 
 ### 触发方式
 
@@ -8,7 +8,7 @@
 
 ::: demo
 ``` html
-<dropdown class="btn-group">
+<bs-dropdown class="btn-group">
   <button class="btn btn-default dropdown-toggle" type="button">
     hover 触发
     <span class="caret"></span>
@@ -20,9 +20,9 @@
     <li class="divider"></li>
     <li><a href="javascript:void(0)">separated link</a></li>
   </ul>
-</dropdown>
+</bs-dropdown>
 
-<dropdown class="btn-group" trigger="click">
+<bs-dropdown class="btn-group" trigger="click">
   <button class="btn btn-default dropdown-toggle" type="button">
     click 触发
     <span class="caret"></span>
@@ -34,6 +34,18 @@
     <li class="divider"></li>
     <li><a href="javascript:void(0)">separated link</a></li>
   </ul>
-</dropdown>
+</bs-dropdown>
 ```
 :::
+
+### Slot
+| name | 说明 |
+|------|--------|
+| - | 触发下拉组件元素 |
+| dropdown | 下拉菜单 |
+
+### Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| trigger | 触发方式 | string | hover, click | hover |

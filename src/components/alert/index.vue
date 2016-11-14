@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    name: 'alert',
+    name: 'bs-alert',
     props: {
       type: {
         type: String,

@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'tab-item',
+    name: 'bs-tab-item',
     props: {
       active: {
         type: Boolean,
