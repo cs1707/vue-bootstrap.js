@@ -1,11 +1,11 @@
 <template>
-  <div class="bs-inline-block"
-    @mouseenter="handleShowPopper"
-    @mouseleave="handleHidePopper">
-    <div class="bs-inline-block" ref="reference">
-      <slot ></slot>
+  <span>
+    <div class="bs-inline-block" ref="reference"
+      @mouseenter="handleShowPopper"
+      @mouseleave="handleHidePopper">
+      <slot></slot>
     </div>
-    <div class="tooltip fade in" :class="[placement]" role="tooltip" ref="popper" v-show="showPopper">
+    <div class="tooltip fade in" :class="[placement]" v-show="showPopper" role="tooltip" ref="popper">
       <div class="tooltip-arrow"></div>
       <div class="tooltip-inner">
         <slot name="content">
@@ -13,11 +13,12 @@
         </slot>
       </div>
     </div>
-  </div>
+  </span>
 </template>
 
 <script>
   import Popper from '../../mixins/vue-popper'
+
   export default {
     name: 'bs-tooltip',
     mixins: [Popper],
@@ -34,7 +35,9 @@
         default () {
           return {
             boundariesPadding: 10,
-            gpuAcceleration: false
+            gpuAcceleration: false,
+            boundariesElement: 'body',
+            flipped: false
           }
         }
       }
@@ -50,6 +53,7 @@
         if (this.manual) return
         clearTimeout(this.timeout)
         this.showPopper = false
+        this.doDestroy()
       }
     }
   }
