@@ -1,6 +1,6 @@
 <template>
   <div class="carousel slide">
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators" v-if="indicator">
       <li v-for="item in slides" :class="{ active: item.classMap.active }" @click="to(item)"></li>
     </ol>
 
@@ -24,19 +24,11 @@
     name: 'bs-carousel',
     componentName: 'bs-carousel',
     props: {
-      active: {
-        type: Number,
-        default: 0
-      },
       interval: {
         type: Number,
         default: 5000
       },
       pause: {
-        type: Boolean,
-        default: true
-      },
-      transition: {
         type: Boolean,
         default: true
       },

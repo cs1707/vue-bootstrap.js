@@ -1,5 +1,7 @@
 ## Carousel
+
 ::: demo
+
 ``` html
 <bs-carousel>
   <bs-carousel-item v-for="i in 10">
@@ -12,4 +14,13 @@
   </bs-carousel-item>
 </bs-carousel>
 ```
+
 :::
+
+### Attributes
+| 参数          | 说明            | 类型            | 可选值                 | 默认值   |
+|-------------  |---------------- |---------------- |---------------------- |-------- |
+| indicator |  是否显示指示器   | boolean        |     -          |     false    |
+| interval | 轮播图滚动间隔(毫秒) | number | - | 5000 |
+| pause | 轮播图是否在鼠标移上时暂停| boolean| - | true |
+| wrap | 轮播图是否无限滚动 | boolean | - | true |
