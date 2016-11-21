@@ -4,15 +4,54 @@
 
 ``` html
 <bs-carousel>
-  <bs-carousel-item v-for="i in 10">
-    <img style="width: 100%;" src="http://7ktq1c.com1.z0.glb.clouddn.com/o_19ie8a0pruah1uo81rc41r4pr8lh.jpg" alt="">
+  <bs-carousel-item v-for="item in slides">
+    <img style="width: 100%;" :src="item.url" alt="">
     <div class="carousel-caption">
       <h3>
-        {{i}}
+        {{item.title}}
       </h3>
+      <p>
+        {{item.text}}
+      </p>
     </div>
   </bs-carousel-item>
 </bs-carousel>
+
+<script>
+  export default {
+    data () {
+      return {
+        slides: [
+          {
+            url: 'https://placehold.it/1200x900?text=one',
+            title: 'Slide #1',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          },
+          {
+            url: 'https://placehold.it/1200x900?text=two',
+            title: 'Slide #2',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          },
+          {
+            url: 'https://placehold.it/1200x900?text=three',
+            title: 'Slide #3',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          },
+          {
+            url: 'https://placehold.it/1200x900?text=four',
+            title: 'Slide #4',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          },
+          {
+            url: 'https://placehold.it/1200x900?text=five',
+            title: 'Slide #5',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          }
+        ]
+      }
+    }
+  }
+</script>
 ```
 
 :::
@@ -24,3 +63,39 @@
 | interval | 轮播图滚动间隔(毫秒) | number | - | 5000 |
 | pause | 轮播图是否在鼠标移上时暂停| boolean| - | true |
 | wrap | 轮播图是否无限滚动 | boolean | - | true |
+
+<script>
+  export default {
+    data () {
+      return {
+        slides: [
+          {
+            url: 'https://placehold.it/1200x900?text=one',
+            title: 'Slide #1',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          },
+          {
+            url: 'https://placehold.it/1200x900?text=two',
+            title: 'Slide #2',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          },
+          {
+            url: 'https://placehold.it/1200x900?text=three',
+            title: 'Slide #3',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          },
+          {
+            url: 'https://placehold.it/1200x900?text=four',
+            title: 'Slide #4',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          },
+          {
+            url: 'https://placehold.it/1200x900?text=five',
+            title: 'Slide #5',
+            text: 'Nulla vitae elit libero, a pharetra augue mollis interdum.'
+          }
+        ]
+      }
+    }
+  }
+</script>

@@ -77,6 +77,10 @@ const router = new Router({
           component: Popover
         }
       ]
+    },
+    {
+      path: '*',
+      redirect: '/components/quickstart'
     }
   ]
 })

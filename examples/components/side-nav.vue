@@ -11,9 +11,9 @@
         <li>
           <router-link to="/components/alert">Alert</router-link>
         </li>
-        <li>
+ <!--        <li>
           <router-link to="/components/affix">Affix</router-link>
-        </li>
+        </li> -->
         <li>
           <router-link to="/components/dropdown">Dropdown</router-link>
         </li>
