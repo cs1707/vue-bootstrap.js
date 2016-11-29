@@ -1,27 +1,31 @@
 # vue-bootstrap
 
-> A Vue.js project
+Bootstrap components built with Vue.js 2.0 (not production ready).
 
-## Build Setup
+## Install
 
 ``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:5000
-npm run dev
-
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+npm install vue-bootstrap.js --save
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Quick Start
+``` javascript
+import Vue from 'vue'
+import VueBootstrap from 'vue-bootstrap.js'
+import 'bootstrap/dist/css/bootstrap.css'
+
+Vue.use(VueBootstrap)
+
+// or
+import {
+  Alert,
+  Popover
+  // ...
+} from 'vuejs-bootstrap'
+
+Vue.component(Alert.name, Alert)
+Vue.component(Popover.name, Popover)
+```
+[中文文档](https://cs1707.github.io/vue-bootstrap/)
+## License
+MIT

@@ -1,6 +1,6 @@
 ## 快速上手
 
-vue-bootstrap.js 是用 Vue.js 2.0 实现的 Bootstrap 组件库，不依赖 jQuery.js、Bootstrap.js。
+vue-bootstrap.js 是用 Vue.js 2.0 实现的 Bootstrap 组件库，不依赖 jQuery.js、Bootstrap.js (not production ready)。
 
 ### 安装
 

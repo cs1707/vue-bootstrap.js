@@ -1,22 +1,22 @@
 {
-  "name": "vue-bootstrap",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
+  "name": "vue-bootstrap.js",
+  "version": "0.0.1-alpha.2",
+  "description": "Bootstrap components built with Vue.js 2.0",
+  "main": "lib/vue-bootstrap.js",
   "author": "cs1707 <lost1q84@gmail.com>",
-  "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
+    "xbuild": "node build/xbuild.js",
+    "deploy": "gh-pages -d dist",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
-  "dependencies": {
-    "bootstrap": "^3.3.7",
-    "vue": "^2.0.1"
-  },
   "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "vue": "^2.0.1",
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.0.0",
     "babel-eslint": "^7.0.0",
@@ -42,6 +42,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "function-bind": "^1.0.2",
+    "gh-pages": "^0.12.0",
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.17.2",
     "inject-loader": "^2.0.1",
@@ -76,5 +77,19 @@
     "webpack-dev-middleware": "^1.8.3",
     "webpack-hot-middleware": "^2.12.2",
     "webpack-merge": "^0.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cs1707/vue-bootstrap.git"
+  },
+  "homepage": "https://cs1707.github.io/vue-bootstrap/",
+  "keywords": [
+    "bootstrap",
+    "vue",
+    "components"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cs1707/vue-bootstrap/issues"
   }
 }

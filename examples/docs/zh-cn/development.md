@@ -10,7 +10,6 @@
     |- components/  --------------- 组件源码
 |- build
 |- config
-|- config
 |- package.json  ------------- npm 配置文件
 |- README.md  ---------------- 项目帮助文档
 |- .babelrc  ----------------- babel 配置文件
