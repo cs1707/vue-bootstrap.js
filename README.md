@@ -21,7 +21,7 @@ import {
   Alert,
   Popover
   // ...
-} from 'vuejs-bootstrap'
+} from 'vue-bootstrap.js'
 
 Vue.component(Alert.name, Alert)
 Vue.component(Popover.name, Popover)
