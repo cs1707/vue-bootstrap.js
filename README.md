@@ -32,6 +32,6 @@ import {
 Vue.component(Alert.name, Alert)
 Vue.component(Popover.name, Popover)
 ```
-[中文文档](https://cs1707.github.io/vue-bootstrap/)
+[中文文档](https://cs1707.github.io/vue-bootstrap.js/)
 ## License
 MIT
