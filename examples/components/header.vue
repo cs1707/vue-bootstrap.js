@@ -13,7 +13,7 @@
       <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
         <ul class="nav navbar-nav navbar-right">
           <li><router-link to="/components">Components</router-link></li>
-          <li><a href="https://github.com/cs1707/vue-bootstrap" target="_blank">Github</a></li>
+          <li><a href="https://github.com/cs1707/vue-bootstrap.js" target="_blank">Github</a></li>
         </ul>
       </nav>
     </div>
