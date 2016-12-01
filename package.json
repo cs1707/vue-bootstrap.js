@@ -1,6 +1,6 @@
 {
   "name": "vue-bootstrap.js",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.4",
   "description": "Bootstrap components built with Vue.js 2.0",
   "main": "lib/vue-bootstrap.js",
   "author": "cs1707 <lost1q84@gmail.com>",
@@ -80,9 +80,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:cs1707/vue-bootstrap.git"
+    "url": "git@github.com:cs1707/vue-bootstrap.js.git"
   },
-  "homepage": "https://cs1707.github.io/vue-bootstrap/",
+  "homepage": "https://cs1707.github.io/vue-bootstrap.js/",
   "keywords": [
     "bootstrap",
     "vue",
@@ -90,6 +90,6 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cs1707/vue-bootstrap/issues"
+    "url": "https://github.com/cs1707/vue-bootstrap.js/issues"
   }
 }

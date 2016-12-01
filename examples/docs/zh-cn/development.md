@@ -21,31 +21,10 @@
 npm install
 ```
 
-如果网络不是很理想，可以用国内镜像下载。新建一个 `.npmrc` 文件在当前项目下，同时配置镜像地址，例如：
-```text
-registry=https://registry.npm.taobao.org
-```
-
-然后再运行
-
-```shell
-PHANTOMJS_CDNURL=http://npm.taobao.org/mirrors/phantomjs npm run bootstrap
-```
-
 ### 启动开发环境
 
 启动完成后浏览器访问 [http://localhost:5000](http://localhost:5000)
 
 ```bash
 npm run dev
-```
-
-### npm scripts
-// todo
-```bash
-npm run dev # 启动开发环境
-npm run dist # 打包组件
-npm run dist:all # 单独打包每个子项目
-npm run lint # 检测 js 代码风格
-node bin/new.js [组件名] # 创建新组件
 ```
